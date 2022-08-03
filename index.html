@@ -22,7 +22,46 @@
     </header>
 
     <main>
+        <section>
 
+            <h1>Current poll:</h1>
+
+            <div id="current-poll-div">
+            </div>
+            <div id="voting-buttons">
+            <div id="option-one-buttons" class="buttons">
+                <button id="option-one-plus-btn">Option 1++</button>
+                <button id="option-one-minus-btn">Option 1--</button>
+            </div>
+
+            <div id="option-two-buttons" class="buttons">
+                <button id="option-two-plus-btn">Option 2++</button>
+                <button id="option-two-minus-btn">Option 2--</button>
+            </div>
+            </div>
+            <div id="save-btn-div" class="buttons">
+                <button id="save-poll-btn">Save poll</button>
+            </div>
+
+        </section>
+
+        <section>
+            <form id="new-poll">
+                <input name="poll-question" placeholder="Enter question"></input>
+                <input name="option-one-input" placeholder="Enter option one"></input>
+                <input name="option-two-input" placeholder="Enter option two"></input>
+                <button id="create-poll-btn" class="buttons">Create poll</button>
+            </form>
+        </section>
+
+        <section id="right-container">
+
+            <h1>Previous polls</h1>
+            
+            <div id="previous-polls-container">
+            </div>
+        
+        </section>
     </main>
 
     <footer>&copy;2022 Software Developer</footer>

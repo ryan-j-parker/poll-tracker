@@ -32,4 +32,67 @@ footer {
     display: flex;
     justify-content: flex-end;
     background-color: var(--footer-background);
-}
+    }
+
+    #current-poll-div p {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        font-size: 1.5em;
+        font-weight: bold;
+        margin: 10px;
+    }
+
+    .new-poll p {
+        display: inline-flex;
+    }
+
+    #voting-buttons {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    #option-one-buttons {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #option-two-buttons {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #posted-poll-container {
+        display: flex;
+        background: rgb(70, 131, 211);
+    }
+
+    input {
+        font-size: 1.2rem;
+    }
+
+    .buttons {
+        display: flex;
+        width: 80px;
+        height: auto;
+        border-radius: 5px;
+    }
+
+    #new-poll-form {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        background-color: blueviolet;
+        width: 50%;
+    }
+
+    h1 {
+        font-family: 'Courier One', serif;
+        color: green;
+        box-shadow: 1px 12px 15px -13px 65%;
+    }
