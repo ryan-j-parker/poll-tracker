@@ -1,13 +1,7 @@
-// import functions and grab DOM elements
-
-/*
-
-const savePollBtn = document.getElementById('save-poll-btn');
-const previousPolls = document.getElementById('previous-polls-container');
-
-*/
 const currentPollDiv = document.getElementById('current-poll-div');
 const newPoll = document.getElementById('new-poll');
+const previousPollsDiv = document.getElementById('previous-polls-div');
+const savePollBtn = document.getElementById('save-poll-btn');
 
 const optionOnePlus = document.getElementById('option-one-plus-btn');
 const optionOneMinus = document.getElementById('option-one-minus-btn');
@@ -22,7 +16,7 @@ let optionOne = '';
 let optionTwo = '';
 let votesOne = 0;
 let votesTwo = 0;
-//let previousPolls = [];
+let previousPolls = [];
 
 // set event listeners
 newPoll.addEventListener('submit', (e) => {
@@ -60,7 +54,6 @@ function renderPoll(question, optionOne, optionTwo, votesOne, votesTwo) {
     newPollEl.classList.add('new-poll');
 
     optionsEl.append(optionOneEl, optionTwoEl);
-    newPollEl.append(questionEl);
     votesEl.append(votesOneEl, votesTwoEl);
     newPollEl.append(questionEl, optionsEl, votesEl);
     currentPollDiv.append(newPollEl);
@@ -72,10 +65,11 @@ function renderPoll(question, optionOne, optionTwo, votesOne, votesTwo) {
 }
 
 function displayCurrentPoll() {
-    currentPollDiv.textContent = '';
+  currentPollDiv.textContent = '';
     const pollEl = renderPoll(question, optionOne, optionTwo, votesOne, votesTwo);
     currentPollDiv.append(pollEl);
-}
+  }
+
   
 
 // get user input
@@ -109,3 +103,40 @@ optionTwoMinus.addEventListener('click', () => {
     displayCurrentPoll();
     console.log(votesTwo);
 });
+
+savePollBtn.addEventListener('click', () => {
+  const currentPollData = {
+    question: question,
+    optionOne: optionOne,
+    optionTwo: optionTwo,
+    votesOne: votesOne,
+    votesTwo: votesTwo
+  };
+    previousPolls.push(currentPollData);
+  console.log(currentPollData);
+
+
+  question = '';
+  optionOne = '';
+  optionTwo = '';
+  votesOne = 0;
+  votesTwo = 0;
+
+  currentPollDiv.textContent = '';
+  previousPollsDiv.textContent = '';
+
+  for (let poll of previousPolls) {
+    const latestPoll = renderPoll(poll.question, poll.optionOne, poll.optionTwo, poll.votesOne, poll.votesTwo);
+    previousPollsDiv.append(latestPoll);
+    console.log(latestPoll);
+
+  }
+
+  displayCurrentPoll();
+  refreshPollData();
+}
+);
+
+function refreshPollData() {
+
+}
