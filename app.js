@@ -41,13 +41,11 @@ savePollBtn.addEventListener('click', () => {
         votesTwo: votesTwo
     };
 
-    previousPolls.push(currentPollData);
+    previousPolls.unshift(currentPollData);
 
     previousPollsDiv.textContent = '';
 
     refreshPollData();
-    currentPollDiv.textContent = '';
-    previousPollsDiv.textContent = '';
 
     displayAllPolls();
     displayCurrentPoll();

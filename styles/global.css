@@ -32,6 +32,34 @@ footer {
     background-color: var(--footer-background);
 }
 
+#past-polls-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 10px;
+}
+
+#current-polls-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+button {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+buttons #left-buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
 /*
     #current-poll-div p {
         display: flex;
@@ -187,18 +215,17 @@ p {
     margin: 0px 20px 0px 20px;
 }
 
-#save-btn-div {
-    float: right;
-    clear: right;
-    align-self: center;
-    grid-area: save-poll;
-    grid-row: span 2;
-    grid-column: 3 / span 2;
-    padding: 5px;
-    margin: 0px 20px 0px 20px;
+
+h1 {
+    font-size: 2.5rem;
 }
 
-#save-poll-btn {
+#question {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
 }
 
 input {
@@ -211,7 +238,20 @@ button {
     padding: 5px;
     border-radius: 5px;
     box-shadow: 5px 5px 13px -3px rgba(0, 0, 0, 0.75);
-        margin: 40px 0px 20px 0px;
+        margin: 30px 30% 20px 30%;
+}
+
+#save-poll-btn {
+
+}
+
+#create-poll-btn, #save-poll-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    text-align: center;
+    margin: 10px 30% 0px 30%;
 }
 
 #right-buttons {
