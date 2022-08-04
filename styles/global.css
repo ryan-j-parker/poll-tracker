@@ -13,7 +13,6 @@ body {
 }
 
 header {
-    position: sticky;
     top: 0;
     display: flex;
     align-items: center;
@@ -25,15 +24,15 @@ main {
 }
 
 footer {
-    position: sticky;
     bottom: 0;
     padding: 7px 20px;
     font-size: .8em;
     display: flex;
     justify-content: flex-end;
     background-color: var(--footer-background);
-    }
+}
 
+/*
     #current-poll-div p {
         display: flex;
         flex-direction: row;
@@ -72,6 +71,7 @@ footer {
         background: rgb(70, 131, 211);
     }
 
+    
     input {
         font-size: 1.2rem;
     }
@@ -106,3 +106,134 @@ footer {
         margin: 0px 5px 0px 5px;
         padding: 0px 12px 0px 12px;
     }
+    */
+
+main {
+    display: grid;
+    grid-template-columns: 3fr 1fr 3fr;
+    grid-template-rows: repeat(9, 1fr);
+    grid-template-areas:
+        "current"
+        "question"
+        "option1 . option2"
+        "opt1++ . opt2++"
+        "opt1-- . opt2--"
+        " . save-poll . "
+        " . question-asked . "
+        "opt1asked . opt2asked"
+        " . create . "
+
+    ;
+
+}
+
+h1 {
+    grid-area: current;
+    grid-row: span 3;
+    align-self: center;
+    justify-self: center;
+    font-size: 2em;
+    font-weight: bold;
+    color: green;
+    box-shadow: 1px 12px 15px -13px 65%;
+}
+
+#left-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    grid-area: question;
+    grid-row: span 3;
+    grid-column: 1 / span 2;
+}
+
+#option-one-plus-btn, #option-one-minus-btn {
+
+}
+
+#option-two-plus-btn, #option-two-minus-btn {
+
+}
+
+#current-poll-div {
+    font-size: 1.6rem;
+    display: grid;
+}
+
+p {
+    display: inline-block;
+    padding: 5px;
+    text-align: center;
+    margin: 50px;
+}
+
+#current--poll-container {
+    margin: 40px 0px 20px 0px;
+
+}
+
+#left-buttons {
+    float: left;
+    clear: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    grid-area: option1;
+    grid-row: span 2;
+    grid-column: 1 / 2;
+    padding: 5px;
+    margin: 0px 20px 0px 20px;
+}
+
+#save-btn-div {
+    float: right;
+    clear: right;
+    align-self: center;
+    grid-area: save-poll;
+    grid-row: span 2;
+    grid-column: 3 / span 2;
+    padding: 5px;
+    margin: 0px 20px 0px 20px;
+}
+
+#save-poll-btn {
+}
+
+input {
+    font-size: 1.2rem;
+    margin: 0px 5px 0px 5px;
+}
+
+button {
+    font-size: 1.2rem;
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 13px -3px rgba(0, 0, 0, 0.75);
+        margin: 40px 0px 20px 0px;
+}
+
+#right-buttons {
+    float: right;
+    clear: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    grid-area: option2;
+    grid-row: 1 / 2;
+    grid-column: 3 / 4;
+    padding: 5px;
+    margin: 0px 20px 0px 20px;
+}
+
+#right-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    grid-area: option1;
+    grid-row: span 3;
+    grid-column: 3 / span 2;
+}
