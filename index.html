@@ -17,12 +17,53 @@
 
 <body>
     <header>
-        <img src="/assets/html_css_js.png">
+        <img src="/assets/html_css_js.png" alt="">
         <h1>Web App</h1>
     </header>
 
     <main>
+        <section id="left-container">
+            <div id="current-poll-container">
 
+                <h1>Current poll:</h1>
+
+                <div id="current-poll-div">
+                </div>
+                <div id="voting-buttons">
+                    <div id="left-buttons" class="buttons">
+                        <button id="option-one-plus-btn">Option 1++</button>
+                        <button id="option-one-minus-btn">Option 1--</button>
+
+                    </div>
+
+                    <div id="right-buttons" class="buttons">
+                        <button id="option-two-plus-btn">Option 2++</button>
+                        <button id="option-two-minus-btn">Option 2--</button>
+                    </div>
+                </div>
+                <div id="save-btn-div" class="buttons">
+                    <button id="save-poll-btn">Save poll</button>
+                </div>
+
+            </div>
+
+            <div id="new-poll-container">
+                <form id="new-poll">
+                    <input name="poll-question" placeholder="Enter question"></input>
+                    <input name="option-one-input" placeholder="Enter option one"></input>
+                    <input name="option-two-input" placeholder="Enter option two"></input>
+                    <button id="create-poll-btn" class="buttons" type="submit">Create poll</button>
+                </form>
+            </div>
+        </section>
+        <section id="right-container">
+
+            <h1>Previous polls</h1>
+
+            <div id="previous-polls-div">
+            </div>
+
+        </section>
     </main>
 
     <footer>&copy;2022 Software Developer</footer>
