@@ -59,83 +59,6 @@ buttons #left-buttons {
     align-items: center;
 }
 
-
-/*
-    #current-poll-div p {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        font-size: 1.5em;
-        font-weight: bold;
-        margin: 10px;
-    }
-
-    .new-poll p {
-        display: inline-flex;
-    }
-
-    #voting-buttons {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-    }
-
-    #option-one-buttons {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    #option-two-buttons {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    #posted-poll-container {
-        display: flex;
-        background: rgb(70, 131, 211);
-    }
-
-    
-    input {
-        font-size: 1.2rem;
-    }
-
-    .buttons {
-        display: flex;
-        width: 80px;
-        height: auto;
-        border-radius: 5px;
-    }
-
-    #new-poll-form {
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        background-color: blueviolet;
-        width: 50%;
-    }
-
-    h1 {
-        font-family: 'Courier One', serif;
-        color: green;
-        box-shadow: 1px 12px 15px -13px 65%;
-    }
-
-    div p {
-        margin: 0px 5px 0px 5px;
-        padding: 0px 12px 0px 12px;
-    }
-
-    #previous-polls-container div {
-        margin: 0px 5px 0px 5px;
-        padding: 0px 12px 0px 12px;
-    }
-    */
-
 main {
     display: grid;
     grid-template-columns: 3fr 1fr 3fr;
@@ -174,14 +97,6 @@ h1 {
     grid-area: question;
     grid-row: span 3;
     grid-column: 1 / span 2;
-}
-
-#option-one-plus-btn, #option-one-minus-btn {
-
-}
-
-#option-two-plus-btn, #option-two-minus-btn {
-
 }
 
 #current-poll-div {
@@ -239,10 +154,6 @@ button {
     border-radius: 5px;
     box-shadow: 5px 5px 13px -3px rgba(0, 0, 0, 0.75);
         margin: 30px 30% 20px 30%;
-}
-
-#save-poll-btn {
-
 }
 
 #create-poll-btn, #save-poll-btn {
