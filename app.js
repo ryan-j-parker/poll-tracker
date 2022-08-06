@@ -1,3 +1,5 @@
+import { renderPoll } from './render-utils.js';
+
 const currentPollDiv = document.getElementById('current-poll-div');
 const newPoll = document.getElementById('new-poll');
 const previousPollsDiv = document.getElementById('previous-polls-div');
@@ -76,33 +78,6 @@ optionTwoMinus.addEventListener('click', () => {
     displayCurrentPoll();
 });
 
-function renderPoll(question, optionOne, optionTwo, votesOne, votesTwo) {
-
-    const newPollEl = document.createElement('div');
-    const questionEl = document.createElement('h3');
-    const optionsEl = document.createElement('div');
-    const optionOneEl = document.createElement('p');
-    const optionTwoEl = document.createElement('p');
-    const votesEl = document.createElement('div');
-    const votesOneEl = document.createElement('p');
-    const votesTwoEl = document.createElement('p');
-
-    questionEl.textContent = question;
-    optionOneEl.textContent = optionOne;
-    optionTwoEl.textContent = optionTwo;
-    votesOneEl.textContent = votesOne;
-    votesTwoEl.textContent = votesTwo;
-
-    newPollEl.classList.add('new-poll');
-
-    optionsEl.append(optionOneEl, optionTwoEl);
-    votesEl.append(votesOneEl, votesTwoEl);
-    newPollEl.append(questionEl, optionsEl, votesEl);
-    currentPollDiv.append(newPollEl);
-
-    return newPollEl;
-}
-
 function displayCurrentPoll() {
     currentPollDiv.textContent = '';
     const pollEl = renderPoll(question, optionOne, optionTwo, votesOne, votesTwo);
@@ -115,8 +90,8 @@ function refreshPollData() {
     question = '';
     optionOne = '';
     optionTwo = '';
-    votesOne = '';
-    votesTwo = '';
+    votesOne = 0;
+    votesTwo = '0';
 }
 
 function displayAllPolls() {
